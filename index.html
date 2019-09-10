@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wonder Tour</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script >
+          $(window).on('load', function() {  
+          $('#loading').fadeOut(); 
+          $('#Load').delay(2500).fadeOut('slow');  
+          $('body').delay(2500).css({'overflow':'visible'});
+        })
+    </script>
+
+
+ <style>
+         body {
+            background-image: url("background.jpg");
+         }
+         
+         .navbar{
+            border-radius:0;
+         }
+         .navbar-brand {
+            font-family:'Satisfy',cursive;
+              
+        }
+        .jumbotron { 
+          background-color: #008000; 
+          color: #FFDF00;
+          font-family:'Satisfy',cursive;
+          border: 3px solid black;
+        }
+        .image{
+            border:3px solid black;
+            padding:6px;
+        }
+        hr{
+            border-bottom: 4px solid black;
+        }
+        blockquote{
+            background-image: url("bq.jpg");
+            font-family:'Satisfy';
+            font-size: 200%;
+            border:2px solid black;
+        }
+        a{
+            text-decoration:none;
+            color:white;
+            text-align: center;
+        }
+        .btn {
+              border: none;
+              color: white;
+              padding: 14px 28px;
+              font-size: 16px;
+              cursor: pointer;
+              text-align: center;
+            }
+
+        .warning {background-color: #ff9800;} /* Orange */
+        .warning:hover {background: #e68a00;}
+        .contacts{
+            background-color:#008000;
+            color: #FFDF00;
+            border:2px solid black;
+
+        }
+        .cus{
+            border:2px solid black;
+            padding:2px;
+            left:30%;
+        }
+        .load__animation{
+          border: 5px solid #272727;
+          border-top-color: #e50914;
+          border-top-style: groove;
+          height: 100px;
+          width: 100px;
+          border-radius: 100%;
+          position: relative;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          -webkit-animation: turn 1.5s linear infinite;
+          -o-animation: turn 1.5s linear infinite;
+          animation: turn 1.5s linear infinite;
+        }
+
+        .load {
+          position: fixed;
+          background: url(http://i.imgur.com/JUlfODF.png) no-repeat 50% fixed / cover;);
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          align-items:center;
+          justify-content: center;
+          z-index: 999;
+        }
+
+        .load__container {
+          position: relative;
+        }
+
+        @keyframes turn {
+          from {transform: rotate(0deg)}
+          to {transform: rotate(360deg)}
+        } 
+
+        .load__title {
+          color: #fff;
+          font-size: 2rem;
+        }
+
+
+        @keyframes loadPage {
+          0% {
+            opacity: 1;
+          }
+          50% {
+            opacity: .5;
+          }
+          100% {
+            opacity: 1;
+          }
+          
+        }
+      </style>  
+         
+</head>
+<body>
+ <div id="Load" class="load">
+      <div class="load__container">
+        <div class="load__animation"></div>
+        <div class="load__mask"></div>
+        <span class="load__title">Loading...</span>
+      </div>
+    </div>
+    <span>Loaded!<span/>
+<nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container-fluid">
+
+        
+        <div class="navbar-header ">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+         <a href="#" class="navbar-brand " >Wonder Tours</a>
+        </div>
+
+        
+        <div class="collapse navbar-collapse" id="mainNavBar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>&nbspHome</a></li>
+                <li><a href="ronit/index.html"><span class="glyphicon glyphicon-picture"></span>&nbspGallery</a></li>
+                <li><a href="shopper.html"><span class="glyphicon glyphicon-piggy-bank"></span>&nbspTrip Cost</a></li>
+                
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<div class="container"><br><br></div>
+<div class="jumbotron text-center" >   
+    <img src="logo.jpg" class="image">
+    <h1 >Wonder Tours</h1>
+ </div>   
+ <div class="container" >
+    <h1 style="font-family:'times new roman';font-size:400%;">About Us</h1><hr>
+    <p style="font-family:'times new roman';font-size:200%;">
+        We provide the best tour packages to visit all the Seven Wonders Of Earth. You can select the whole 7 wonder special "Wonder Package" or just few from them. We provide the most luxurious stay and the most enthralling itinerary. Come join us.&nbsp<b><i>Click the gallery in navigation bar to view the beautiful plcaes we cover.</i></b>
+    </p>
+ </div>
+
+ <blockquote class="container">
+     The best tour packages and worth its price. Planning to travel with Wonder Tours in the session 2019-2024 too
+     <footer>Narendra Modi</footer>
+ </blockquote>
+
+ <blockquote class="container">
+    The tourist guide provided couldn't answer my question about how much explosive it would take to bring down the colosseum. Disappointed.
+     <footer>Kim Jong Un</footer>
+ </blockquote> 
+ <blockquote class="container">
+   The trip was informative especially the Great Wall of China inspired me. I am gonna get a bigger wall in America. 
+     <footer>Donald Trump</footer>
+ </blockquote>    
+
+<hr>
+<div class="container-fluid text-center contacts">
+    <h1 class="cus">Contact Us</h1><br>
+<div class='row'>
+    <div class="col-md-4 "><span class="glyphicon glyphicon-phone"></span><h3>Phone</h3><h4>+9191919191</h4></div>
+    <div class="col-md-4 "><span class="glyphicon glyphicon-envelope"></span><h3>Email</h3><h4>wontou@cops_rocks.com</h4></div>
+    <div class="col-md-4 "><span class="glyphicon glyphicon-inbox"></span><h3>Fax</h3><h4>Who even uses fax?!</h4></div>
+</div></div>    
+</body>
+</html>

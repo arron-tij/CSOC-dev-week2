@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+         body {
+            background-image: url("background.jpg");
+         }
+          .load__animation{
+          border: 5px solid #272727;
+          border-top-color: #e50914;
+          border-top-style: groove;
+          height: 100px;
+          width: 100px;
+          border-radius: 100%;
+          position: relative;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          -webkit-animation: turn 1.5s linear infinite;
+          -o-animation: turn 1.5s linear infinite;
+          animation: turn 1.5s linear infinite;
+        }
+
+        .load {
+          position: fixed;
+          background: url(http://i.imgur.com/JUlfODF.png) no-repeat 50% fixed / cover;);
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          align-items:center;
+          justify-content: center;
+          z-index: 999;
+        }
+
+        .load__container {
+          position: relative;
+        }
+
+        @keyframes turn {
+          from {transform: rotate(0deg)}
+          to {transform: rotate(360deg)}
+        } 
+
+        .load__title {
+          color: #fff;
+          font-size: 2rem;
+        }
+
+
+        @keyframes loadPage {
+          0% {
+            opacity: 1;
+          }
+          50% {
+            opacity: .5;
+          }
+          100% {
+            opacity: 1;
+          }
+          
+        }
+        .navbar{
+            border-radius:0;
+         }
+         .navbar-brand {
+            font-family:'Satisfy',cursive;
+              
+        }
+        .image{
+            height:50%;
+            width:50%;
+        }
+        hr{
+            border:1px solid black;
+        }
+        .tpc{
+            border:2px solid black;
+            padding:2px;
+        }
+      </style>   
+<script>
+ $(window).on('load', function() {  
+          $('#loading').fadeOut(); 
+          $('#Load').delay(2500).fadeOut('slow');  
+          $('body').delay(2500).css({'overflow':'visible'});
+        })
+
+function display()
+    {   var sum=0;
+        if(document.getElementById("cb1").checked==true)sum+=20000;
+        if(document.getElementById("cb2").checked==true)sum+=80000;
+        if(document.getElementById("cb3").checked==true)sum+=100000;
+        if(document.getElementById("cb4").checked==true)sum+=90000;
+        if(document.getElementById("cb5").checked==true)sum+=60000;
+        if(document.getElementById("cb6").checked==true)sum+=110000;
+        if(document.getElementById("cb7").checked==true)sum+=95000;
+        document.getElementById('result').innerHTML=sum;
+
+        
+    }    
+
+</script>
+    </head>
+<body>
+    <div id="Load" class="load">
+      <div class="load__container">
+        <div class="load__animation"></div>
+        <div class="load__mask"></div>
+        <span class="load__title">Loading...</span>
+      </div>
+    </div>
+    <span>Loaded!<span/>
+<nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container-fluid">
+
+        
+        <div class="navbar-header ">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+         <a href="#" class="navbar-brand " >Wonder Tours</a>
+        </div>
+
+        
+        <div class="collapse navbar-collapse" id="mainNavBar">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html"><span class="glyphicon glyphicon-home"></span>&nbspHome</a></li>
+                
+                <li><a href="ronit/index.html"><span class="glyphicon glyphicon-picture"></span>&nbspGallery</a></li>
+                <li class="active"><a href="shopper.html"><span class="glyphicon glyphicon-piggy-bank"></span>&nbspTrip Cost</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<br>
+<div class="container jumbotron text-center">
+  <h2 class="tpc">Trip Cost Calculator</h2>
+  <p>Select the places you would like to visit</p>
+  <br>
+  <form>
+    <div class="row">
+    <div class="checkbox col-md-3">
+      <label><input type="checkbox" value="" id="cb1" ><h3>The Taj Mahal @Rs.20000</h3><img src="ronit/images/taj.jpg" class="image"></label>
+    </div>
+    <div class="checkbox col-md-3">
+      <label><input type="checkbox" value="" id="cb2" ><h3>Machu Picchu @Rs.80000</h3><img src="ronit/images/machu.jpg"  class="image"></label>
+    </div>
+    <div class="checkbox col-md-3">
+      <label><input type="checkbox" value="" id="cb3"><h3>Colosseum @Rs.100000</h3><img src="ronit/images/colos.jpg"  class="image"></label>
+    </div>
+    <div class="checkbox col-md-3">
+      <label><input type="checkbox" value="" id="cb4"><h3>Christ The Redemeer @Rs.90000</h3><img src="ronit/images/christ.jpg"  class="image"></label>
+    </div>
+    </div>
+
+     <div class="row">
+    <div class="checkbox col-md-4">
+      <label><input type="checkbox" value="" id="cb5" ><h3>El Castillo @Rs.60000</h3><img src="ronit/images/kukul.jpg" class="image"></label>
+    </div>
+    <div class="checkbox col-md-4">
+      <label><input type="checkbox" value="" id="cb6" ><h3>Petra @Rs.110000</h3><img src="ronit/images/petra.jpg"  class="image"></label>
+    </div>
+    <div class="checkbox col-md-4">
+      <label><input type="checkbox" value="" id="cb7"><h3>The Great Wall Of China @Rs.95000</h3><img src="ronit/images/wall.jpg"  class="image"></label>
+    </div>
+    </div>
+  </form>
+
+
+<button onclick="display()" class="btn-success"><h4>Calculate Cost</h4></button><br><br>
+<p><u>The total tour cost per head is</u></p>
+<hr>
+<p id="result">0</p>
+<hr>
+
+
+
+</body>
+</html>
